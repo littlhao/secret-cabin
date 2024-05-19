@@ -1,0 +1,10 @@
+..\obj\stm32h7xx_hal_msp.o: stm32h7xx_hal_msp.c
+..\obj\stm32h7xx_hal_msp.o: main.h
+..\obj\stm32h7xx_hal_msp.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h
+..\obj\stm32h7xx_hal_msp.o: ..\USER\stm32h7xx_hal_conf.h
+..\obj\stm32h7xx_hal_msp.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h
+..\obj\stm32h7xx_hal_msp.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_def.h
+..\obj\stm32h7xx_hal_msp.o: ..\USER\stm32h7xx.h
+..\obj\stm32h7xx_hal_msp.o: ..\USER\stm32h750xx.h
+..\obj\stm32h7xx_hal_msp.o: ..\CORE\core_cm7.h
+..\obj\stm32h7xx_hal_msp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
