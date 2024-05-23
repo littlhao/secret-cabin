@@ -31,3 +31,44 @@ void motor_right_ctl(int8_t speed)
 	}
 
 }
+
+void left(void)
+{
+	motor_left_ctl(80);
+	motor_right_ctl(80);
+}
+
+
+void right(void)
+{
+	motor_left_ctl(-80);
+	motor_right_ctl(-80);
+}
+
+void forward(void)
+{
+	motor_left_ctl(80);
+	motor_right_ctl(-80);
+}
+
+void backward(void)
+{
+	motor_left_ctl(-80);
+	motor_right_ctl(80);
+}
+
+void rotation(void)
+{
+	motor_left_ctl(60);
+	motor_right_ctl(80);
+
+}
+
+
+
+
+
+
+
+
+

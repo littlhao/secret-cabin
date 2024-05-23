@@ -102,5 +102,9 @@
 ..\obj\main_1.o: main.h
 ..\obj\main_1.o: ..\SYSTEM\sys\sys.h
 ..\obj\main_1.o: ..\CORE\core_cm7.h
+..\obj\main_1.o: ..\SYSTEM\usart\usart.h
+..\obj\main_1.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main_1.o: ..\SYSTEM\delay\delay.h
 ..\obj\main_1.o: ..\SYSTEM\pwm\pwm.h
 ..\obj\main_1.o: ..\HARDWARE\Motor\motor.h
+..\obj\main_1.o: ..\HARDWARE\HC-SR04\HC-SR04.h

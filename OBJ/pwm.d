@@ -99,3 +99,4 @@
 ..\obj\pwm.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h
 ..\obj\pwm.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h
 ..\obj\pwm.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_hcd.h
+..\obj\pwm.o: ..\SYSTEM\timer\timer.h
