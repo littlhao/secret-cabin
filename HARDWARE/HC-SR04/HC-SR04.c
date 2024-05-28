@@ -36,25 +36,25 @@ void HC_SR04_TIM7_Init(void)
 
 }
 
- void HC_SR04_TIM4_Init(void)
-{
-    __HAL_RCC_TIM4_CLK_ENABLE();
-	
-    TIM4_HandleType.Instance = TIM4;
-	TIM4_HandleType.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-    TIM4_HandleType.Init.Prescaler = 5000-1;
-    TIM4_HandleType.Init.CounterMode = TIM_COUNTERMODE_UP;
-    TIM4_HandleType.Init.Period = 5000-1;
-    TIM4_HandleType.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-	
-	HAL_TIM_Base_Init(&TIM4_HandleType);
-	
-	TIM_ClockConfigTypeDef TIM4_ClockConfigType;
-    TIM4_ClockConfigType.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-    HAL_TIM_ConfigClockSource(&TIM4_HandleType, &TIM4_ClockConfigType);
-	
-	HAL_TIM_Base_Start_IT(&TIM4_HandleType);
-}
+// void HC_SR04_TIM4_Init(void)
+//{
+//    __HAL_RCC_TIM4_CLK_ENABLE();
+//	
+//    TIM4_HandleType.Instance = TIM4;
+//	TIM4_HandleType.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+//    TIM4_HandleType.Init.Prescaler = 5000-1;
+//    TIM4_HandleType.Init.CounterMode = TIM_COUNTERMODE_UP;
+//    TIM4_HandleType.Init.Period = 5000-1;
+//    TIM4_HandleType.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+//	
+//	HAL_TIM_Base_Init(&TIM4_HandleType);
+//	
+//	TIM_ClockConfigTypeDef TIM4_ClockConfigType;
+//    TIM4_ClockConfigType.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+//    HAL_TIM_ConfigClockSource(&TIM4_HandleType, &TIM4_ClockConfigType);
+//	
+//	HAL_TIM_Base_Start_IT(&TIM4_HandleType);
+//}
 
 
 void HC_SR04_GPIO_Init(void)
@@ -80,8 +80,8 @@ void HC_SR04_GPIO_Init(void)
 	HAL_NVIC_SetPriority(EXTI2_IRQn,1,0);
 	HAL_NVIC_EnableIRQ(EXTI2_IRQn);
 	
-	HAL_NVIC_SetPriority(TIM4_IRQn,2,0);
-	HAL_NVIC_EnableIRQ(TIM4_IRQn);
+//	HAL_NVIC_SetPriority(TIM4_IRQn,2,0);
+//	HAL_NVIC_EnableIRQ(TIM4_IRQn);
 }
 
 
@@ -117,23 +117,23 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 
 //定时器触发超声波
-void TIM4_IRQHandler(void)
-{
-	HAL_TIM_IRQHandler(&TIM4_HandleType);
-}
+//void TIM4_IRQHandler(void)
+//{
+//	HAL_TIM_IRQHandler(&TIM4_HandleType);
+//}
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-    if (htim->Instance == TIM4)
-    {
-        // 触发超声波
-        HAL_GPIO_WritePin(GPIOC, Trig, GPIO_PIN_SET);
-        delay_us(15); // 持续15us高电平
-        HAL_GPIO_WritePin(GPIOC, Trig, GPIO_PIN_RESET);
-		HAL_NVIC_ClearPendingIRQ(TIM4_IRQn);
-    }
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//{
+//    if (htim->Instance == TIM4)
+//    {
+//        // 触发超声波
+//        HAL_GPIO_WritePin(GPIOC, Trig, GPIO_PIN_SET);
+//        delay_us(15); // 持续15us高电平
+//        HAL_GPIO_WritePin(GPIOC, Trig, GPIO_PIN_RESET);
+//		HAL_NVIC_ClearPendingIRQ(TIM4_IRQn);
+//    }
 
-}
+//}
 
 
 
@@ -149,12 +149,12 @@ float HC_SR04_GetDistance(void)
 }
 
 
-//void HC_SR04_Start(void)
-//{
-//	HAL_GPIO_WritePin(GPIOC,Trig,GPIO_PIN_SET);
-//	delay_us(15);
-//	HAL_GPIO_WritePin(GPIOC,Trig,GPIO_PIN_RESET);
-//}
+void HC_SR04_Start(void)
+{
+	HAL_GPIO_WritePin(GPIOC,Trig,GPIO_PIN_SET);
+	delay_us(15);
+	HAL_GPIO_WritePin(GPIOC,Trig,GPIO_PIN_RESET);
+}
 
 
 

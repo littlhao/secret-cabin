@@ -108,3 +108,9 @@
 ..\obj\main_1.o: ..\SYSTEM\pwm\pwm.h
 ..\obj\main_1.o: ..\HARDWARE\Motor\motor.h
 ..\obj\main_1.o: ..\HARDWARE\HC-SR04\HC-SR04.h
+..\obj\main_1.o: ..\HARDWARE\MPU_6050\MPU_6050.h
+..\obj\main_1.o: ..\HARDWARE\MPU_6050\MPU6050_Reg.h
+..\obj\main_1.o: ..\IMU\IMU.h
+..\obj\main_1.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\main_1.o: ..\IMU\MadgwickAHRS.h
+..\obj\main_1.o: ..\HARDWARE\Servo\servo.h

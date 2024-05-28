@@ -32,26 +32,26 @@ void motor_right_ctl(int8_t speed)
 
 }
 
-void left(void)
+void go_left(void)
 {
 	motor_left_ctl(80);
 	motor_right_ctl(80);
 }
 
 
-void right(void)
+void go_right(void)
 {
 	motor_left_ctl(-80);
 	motor_right_ctl(-80);
 }
 
-void forward(void)
+void go_forward(void)
 {
 	motor_left_ctl(80);
 	motor_right_ctl(-80);
 }
 
-void backward(void)
+void go_backward(void)
 {
 	motor_left_ctl(-80);
 	motor_right_ctl(80);

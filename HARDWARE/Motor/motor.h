@@ -4,10 +4,10 @@
 
 void motor_left_ctl(int8_t speed);
 void motor_right_ctl(int8_t speed);
-void left(void);
-void right(void);
-void forward(void);
-void backward(void);
+void go_left(void);
+void go_right(void);
+void go_forward(void);
+void go_backward(void);
 void rotation(void);
 	
 #endif

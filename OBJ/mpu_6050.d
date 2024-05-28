@@ -99,3 +99,10 @@
 ..\obj\mpu_6050.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h
 ..\obj\mpu_6050.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h
 ..\obj\mpu_6050.o: ..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_hcd.h
+..\obj\mpu_6050.o: ..\HARDWARE\MPU_6050\MPU_6050.h
+..\obj\mpu_6050.o: ..\HARDWARE\MPU_6050\MPU6050_Reg.h
+..\obj\mpu_6050.o: ..\SYSTEM\usart\usart.h
+..\obj\mpu_6050.o: ..\SYSTEM\sys\sys.h
+..\obj\mpu_6050.o: ..\CORE\core_cm7.h
+..\obj\mpu_6050.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\mpu_6050.o: ..\SYSTEM\delay\delay.h

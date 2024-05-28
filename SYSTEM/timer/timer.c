@@ -50,7 +50,9 @@ void OC_Init(void)
 
 void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim)
 {
-    __HAL_RCC_TIM2_CLK_ENABLE();
+	if(htim->Instance == TIM2)
+    {
+	__HAL_RCC_TIM2_CLK_ENABLE();
     __HAL_RCC_GPIOA_CLK_ENABLE();
 
     GPIO_InitTypeDef GPIOA_Init;
@@ -60,6 +62,21 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim)
     GPIOA_Init.Pull = GPIO_PULLUP;
     GPIOA_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     HAL_GPIO_Init(GPIOA, &GPIOA_Init);
+	}
+	else if(htim->Instance == TIM4)
+	{
+	    __HAL_RCC_TIM4_CLK_ENABLE();
+		__HAL_RCC_GPIOD_CLK_ENABLE();
+
+		GPIO_InitTypeDef GPIOD_Init;
+		GPIOD_Init.Alternate = GPIO_AF2_TIM4;
+		GPIOD_Init.Mode = GPIO_MODE_AF_PP;
+		GPIOD_Init.Pin = GPIO_PIN_15;
+		GPIOD_Init.Pull = GPIO_PULLUP;
+		GPIOD_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+		HAL_GPIO_Init(GPIOD, &GPIOD_Init);
+	}
+
 }
 
 void HAL_TIM_OC_MspInit(TIM_HandleTypeDef *htim)

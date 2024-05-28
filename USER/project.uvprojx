@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H750xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\HALLIB\STM32H7xx_HAL_Driver\Inc;..\HALLIB\STM32H7xx_HAL_Driver\Src;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\SYSTEM\pwm;..\HARDWARE\Motor;..\HARDWARE\HC-SR04;..\SYSTEM\timer</IncludePath>
+              <IncludePath>..\CORE;..\HALLIB\STM32H7xx_HAL_Driver\Inc;..\HALLIB\STM32H7xx_HAL_Driver\Src;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\SYSTEM\pwm;..\HARDWARE\Motor;..\HARDWARE\HC-SR04;..\SYSTEM\timer;..\HARDWARE\MPU_6050;..\SYSTEM\IIC;..\IMU</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -425,54 +425,14 @@
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_rtc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rtc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_tim_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32h7xx_hal.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_hal_cortex.h</FileName>
@@ -480,9 +440,9 @@
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_cortex.h</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_def.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_def.h</FilePath>
+              <FileName>stm32h7xx_hal_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_hal_exti.h</FileName>
@@ -490,14 +450,89 @@
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_exti.h</FilePath>
             </File>
             <File>
+              <FileName>stm32h7xx_hal_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32h7xx_hal_gpio.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio.h</FilePath>
             </File>
             <File>
+              <FileName>stm32h7xx_hal_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_rcc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_rcc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_rcc_ex.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_rtc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rtc.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rtc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_rtc_ex.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rtc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_tim_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_tim_ex.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_def.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_def.h</FilePath>
+            </File>
+            <File>
               <FileName>stm32h7xx_hal_gpio_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_hal_pwr.h</FileName>
@@ -510,41 +545,6 @@
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pwr_ex.h</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_rcc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_rcc_ex.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc_ex.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_rtc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rtc.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_rtc_ex.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rtc_ex.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_tim.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_tim_ex.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32h7xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c</FilePath>
@@ -555,9 +555,9 @@
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_uart.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_uart_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_uart_ex.c</FilePath>
+              <FileName>stm32h7xx_hal_uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_hal_usart.c</FileName>
@@ -565,9 +565,29 @@
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_usart.c</FilePath>
             </File>
             <File>
+              <FileName>stm32h7xx_hal_usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_usart.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_uart_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_uart_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_uart_ex.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h</FilePath>
+            </File>
+            <File>
               <FileName>stm32h7xx_hal_usart_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_usart_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_usart_ex.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_usart_ex.h</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_hal_dma.c</FileName>
@@ -585,24 +605,49 @@
               <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma2d.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_uart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h</FilePath>
+              <FileName>stm32h7xx_hal_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_uart_ex.h</FileName>
+              <FileName>stm32h7xx_hal_i2c.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h</FilePath>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_i2c.h</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_usart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_usart.h</FilePath>
+              <FileName>stm32h7xx_hal_i2c_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_hal_usart_ex.h</FileName>
+              <FileName>stm32h7xx_hal_i2c_ex.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_usart_ex.h</FilePath>
+              <FilePath>..\HALLIB\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_i2c_ex.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>IMU</GroupName>
+          <Files>
+            <File>
+              <FileName>IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU\IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>IMU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\IMU\IMU.h</FilePath>
+            </File>
+            <File>
+              <FileName>MadgwickAHRS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU\MadgwickAHRS.c</FilePath>
+            </File>
+            <File>
+              <FileName>MadgwickAHRS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\IMU\MadgwickAHRS.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -628,6 +673,31 @@
               <FileName>HC-SR04.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HARDWARE\HC-SR04\HC-SR04.h</FilePath>
+            </File>
+            <File>
+              <FileName>MPU_6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\MPU_6050\MPU_6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU_6050.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HARDWARE\MPU_6050\MPU_6050.h</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050_Reg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HARDWARE\MPU_6050\MPU6050_Reg.h</FilePath>
+            </File>
+            <File>
+              <FileName>servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\Servo\servo.c</FilePath>
+            </File>
+            <File>
+              <FileName>servo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HARDWARE\Servo\servo.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -683,6 +753,16 @@
               <FileName>usart.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\SYSTEM\usart\usart.h</FilePath>
+            </File>
+            <File>
+              <FileName>IIC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\IIC\IIC.c</FilePath>
+            </File>
+            <File>
+              <FileName>IIC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SYSTEM\IIC\IIC.h</FilePath>
             </File>
           </Files>
         </Group>
